@@ -37,7 +37,7 @@ class Helpmate{
 
         $responseData = $response->json();
 
-        if($responseData['status'] === 'success'){
+        if( empty($responseData) || $responseData['status'] === 'success'){
             return true;
         }
         if($responseData['status'] === 'error'){
